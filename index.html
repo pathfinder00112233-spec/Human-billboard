@@ -1,0 +1,2501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE HUMAN BILLBOARD — Three ways to advertise. None of them are normal.</title>
+  <meta name="description" content="Physical and creative sponsorship placements on unusual real-world adventures. Fund the car, the world, or the tattoo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       RESET & ROOT VARIABLES (CREAMY WHITE EDITORIAL THEME)
+       ========================================================================== */
+    :root {
+      --bg-cream: #F8F6F0;
+      --bg-cream-tint: #F1EDE4;
+      --bg-card: #FFFFFF;
+      --bg-card-hover: #FAF8F4;
+      --bg-input: #F3EFE7;
+      --border-subtle: rgba(20, 18, 15, 0.08);
+      --border-medium: rgba(20, 18, 15, 0.16);
+      --border-strong: rgba(20, 18, 15, 0.85);
+      --border-accent: rgba(224, 43, 25, 0.4);
+      --text-main: #14120F;
+      --text-muted: #5C5852;
+      --text-dim: #8E8981;
+      --accent-primary: #E02B19;
+      --accent-secondary: #FF5A36;
+      --accent-gradient: linear-gradient(135deg, #E02B19 0%, #FF5A36 100%);
+      --accent-glow: rgba(224, 43, 25, 0.2);
+      --gold: #A86A00;
+      --gold-border: rgba(168, 106, 0, 0.4);
+      --gold-bg: rgba(168, 106, 0, 0.06);
+      --font-display: 'Space Grotesk', -apple-system, sans-serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --container-max: 1240px;
+      --shadow-sm: 0 2px 8px rgba(35, 30, 20, 0.04);
+      --shadow-md: 0 12px 32px rgba(35, 30, 20, 0.06);
+      --shadow-lg: 0 24px 60px rgba(35, 30, 20, 0.1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-color: var(--bg-cream);
+      background-image: 
+        radial-gradient(circle at 10% 15%, rgba(224, 43, 25, 0.03) 0%, transparent 40%),
+        radial-gradient(circle at 90% 60%, rgba(255, 90, 54, 0.03) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .mono { font-family: var(--font-mono); }
+    .display { font-family: var(--font-display); }
+
+    .tag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--bg-cream-tint);
+      border: 1px solid var(--border-medium);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .tag-badge.demo {
+      border-color: rgba(168, 106, 0, 0.35);
+      color: var(--gold);
+      background: rgba(168, 106, 0, 0.08);
+    }
+    .tag-badge.demo::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 6px var(--gold);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--text-main);
+      color: #FFF;
+      border: 1px solid var(--text-main);
+    }
+    .btn-primary:hover {
+      background: #2B2824;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(20, 18, 15, 0.15);
+    }
+    .btn-accent {
+      background: var(--accent-gradient);
+      color: #FFF;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(224, 43, 25, 0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-medium);
+    }
+    .btn-outline:hover {
+      border-color: var(--text-main);
+      background: var(--bg-cream-tint);
+      transform: translateY(-2px);
+    }
+    .btn-sm { padding: 8px 16px; font-size: 0.8rem; }
+
+    /* ==========================================================================
+       HEADER
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      background: rgba(248, 246, 240, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+    .brand-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-primary);
+    }
+    .main-nav { display: flex; align-items: center; gap: 28px; }
+    .nav-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+    .nav-link:hover { color: var(--text-main); }
+    .header-actions { display: flex; align-items: center; gap: 16px; }
+
+    /* ==========================================================================
+       HERO
+       ========================================================================== */
+    .hero-section {
+      padding: 100px 0 80px;
+      position: relative;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      text-align: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .hero-subhead-pill { margin: 0 auto 8px; }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+    }
+    .hero-title .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-tagline {
+      font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+    .hero-note {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent-primary);
+      letter-spacing: 0.04em;
+    }
+    .morph-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 8px auto;
+      padding: 12px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-sm);
+    }
+    .morph-words {
+      position: relative;
+      font-weight: 700;
+      color: var(--text-main);
+      display: inline-block;
+      margin-left: 8px;
+      min-width: 90px;
+      text-align: left;
+    }
+    .morph-word {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.4s ease;
+      position: absolute;
+      left: 0;
+      top: -2px;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .morph-word.active { opacity: 1; transform: translateY(0); position: relative; }
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       SECTION HEADERS
+       ========================================================================== */
+    .section-header { text-align: center; max-width: 760px; margin: 0 auto 56px; }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-top: 12px;
+      line-height: 1.15;
+    }
+    .section-desc { color: var(--text-muted); font-size: 1.05rem; margin-top: 14px; line-height: 1.6; }
+
+    /* ==========================================================================
+       CAMPAIGN SECTION
+       ========================================================================== */
+    .campaigns-section { padding: 90px 0 80px; position: relative; }
+    .campaign-tabs {
+      display: flex;
+      gap: 12px;
+      max-width: 860px;
+      margin: 0 auto 44px;
+      background: var(--bg-cream-tint);
+      padding: 6px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-medium);
+    }
+    .campaign-tab-btn {
+      flex: 1;
+      padding: 16px 20px;
+      border-radius: var(--radius-sm);
+      text-align: left;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      color: var(--text-muted);
+    }
+    .campaign-tab-btn:hover { background: rgba(255, 255, 255, 0.6); color: var(--text-main); }
+    .campaign-tab-btn.active {
+      background: var(--bg-card);
+      border-color: var(--border-medium);
+      color: var(--text-main);
+      box-shadow: var(--shadow-md);
+    }
+    .tab-num {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent-primary);
+      display: block;
+      margin-bottom: 4px;
+      letter-spacing: 0.05em;
+    }
+    .tab-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .campaign-display-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .campaign-panel { display: none; animation: fadeIn 0.4s ease forwards; }
+    .campaign-panel.active { display: block; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .panel-header-banner {
+      padding: 40px 48px 32px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+      background: linear-gradient(180deg, rgba(241, 237, 228, 0.4) 0%, transparent 100%);
+    }
+    .panel-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      max-width: 650px;
+    }
+    .panel-copy {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-top: 12px;
+      max-width: 620px;
+      line-height: 1.6;
+    }
+    .panel-meta-stats {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      min-width: 260px;
+    }
+    .funding-stat-card {
+      background: var(--bg-cream-tint);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      width: 100%;
+    }
+    .funding-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .funding-raised { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--text-main); }
+    .funding-target { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(20, 18, 15, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--accent-gradient);
+      border-radius: 999px;
+      transition: width 1s ease;
+      width: 0%;
+    }
+    .funding-sub-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .panel-body {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 0;
+      min-height: 560px;
+      min-width: 0;
+      width: 100%;
+    }
+    .panel-visual-area {
+      padding: 40px;
+      background: radial-gradient(circle at center, rgba(224, 43, 25, 0.03) 0%, transparent 70%);
+      border-right: 1px solid var(--border-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      min-width: 0;
+      width: 100%;
+    }
+    .panel-sidebar {
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: #FAF8F5;
+      min-width: 0;
+    }
+
+    /* ==========================================================================
+       BILLBOARD CANVAS BOX & MOBILE-PROOF LAYOUT
+       ========================================================================== */
+    .billboard-canvas-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-width: 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .billboard-svg-wrap {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 12px 24px rgba(20, 18, 15, 0.08));
+    }
+    .billboard-slot-rect {
+      cursor: pointer;
+      transition: var(--transition);
+      fill: rgba(224, 43, 25, 0.06);
+      stroke: var(--accent-primary);
+      stroke-width: 1.5;
+      stroke-dasharray: 4 4;
+    }
+    .billboard-slot-rect:hover {
+      fill: rgba(224, 43, 25, 0.2);
+      stroke-dasharray: none;
+      stroke-width: 2;
+    }
+
+    /* SUB-VIEW SWITCHER PILLS (NO CROPPING) */
+    .view-sub-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      background: var(--bg-cream-tint);
+      border: 1px solid var(--border-medium);
+      padding: 4px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+    }
+    .view-sub-btn {
+      padding: 6px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 6px;
+      color: var(--text-muted);
+      transition: var(--transition);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .view-sub-btn.active {
+      background: #FFF;
+      color: var(--accent-primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .subview-pane { display: none; width: 100%; min-width: 0; animation: fadeIn 0.3s ease; }
+    .subview-pane.active { display: block; }
+
+    /* MEGA SPONSOR BOXES (RESPONSIVE NO OVERFLOW) */
+    .mega-buyout-box {
+      padding: 24px;
+      text-align: center;
+      background: var(--gold-bg);
+      border: 2px dashed var(--gold);
+      border-radius: var(--radius-sm);
+      width: 100%;
+      box-sizing: border-box;
+      word-break: break-word;
+    }
+    .mega-buyout-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      margin: 12px 0 6px;
+      font-weight: 800;
+    }
+    .mega-buyout-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      max-width: 440px;
+      margin: 0 auto 16px;
+      line-height: 1.5;
+    }
+    .mega-buyout-price {
+      font-family: var(--font-mono);
+      font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    /* ROUTE BOX */
+    .route-display {
+      margin-top: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      width: 100%;
+      box-shadow: var(--shadow-sm);
+    }
+    .route-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .route-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .route-stops {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      align-items: center;
+    }
+    .route-city { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; color: var(--text-main); }
+    .route-arrow { color: var(--accent-primary); font-size: 0.85rem; font-weight: 700; }
+
+    /* SPOTS LIST SIDEBAR */
+    .spots-list-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .spots-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 480px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+    .spots-grid::-webkit-scrollbar { width: 4px; }
+    .spots-grid::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 4px; }
+
+    .spot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .spot-card:hover {
+      background: #FFFFFF;
+      border-color: var(--accent-primary);
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(224, 43, 25, 0.08);
+    }
+    .spot-card.mega-card {
+      border: 2px solid var(--gold);
+      background: var(--gold-bg);
+    }
+    .spot-card.mega-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 16px rgba(168, 106, 0, 0.15);
+    }
+    .spot-card-info h4 { font-family: var(--font-display); font-size: 0.92rem; font-weight: 700; color: var(--text-main); }
+    .spot-card-info p { font-size: 0.76rem; color: var(--text-muted); margin-top: 2px; }
+    .spot-card-price { text-align: right; }
+    .spot-price-val { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; color: var(--text-main); }
+    .spot-status { font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; color: #1E824C; font-weight: 700; display: block; }
+    .spot-status.mega { color: var(--gold); }
+
+    /* NOTICE BOX */
+    .permanent-warning-box {
+      margin-top: 20px;
+      background: rgba(224, 43, 25, 0.06);
+      border: 1px solid rgba(224, 43, 25, 0.3);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      width: 100%;
+    }
+    .permanent-warning-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-primary);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .permanent-warning-copy { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ==========================================================================
+       WILDCARD STUNT SECTION
+       ========================================================================== */
+    .wildcard-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, var(--bg-cream) 0%, var(--bg-cream-tint) 100%);
+    }
+    .wildcard-card {
+      background: var(--bg-card);
+      border: 2px dashed var(--accent-primary);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+    .wildcard-tag { color: var(--accent-primary); font-weight: 700; font-family: var(--font-mono); font-size: 0.8rem; margin-bottom: 8px; display: block; }
+    .wildcard-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; line-height: 1.1; }
+    .wildcard-desc { font-size: 1.05rem; color: var(--text-muted); margin-top: 16px; line-height: 1.6; }
+    .wildcard-action-box {
+      background: var(--bg-cream-tint);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .wildcard-price-label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase; }
+    .wildcard-price-value { font-family: var(--font-mono); font-size: 2.2rem; font-weight: 800; color: var(--text-main); margin: 6px 0 16px; }
+    .wildcard-note { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-top: 14px; }
+
+    /* ==========================================================================
+       HOW IT WORKS & SECTIONS
+       ========================================================================== */
+    .how-section { padding: 90px 0; border-top: 1px solid var(--border-subtle); background: var(--bg-cream-tint); }
+    .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      position: relative;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .step-card:hover { border-color: var(--accent-primary); transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .step-num { font-family: var(--font-mono); font-size: 2.5rem; font-weight: 800; line-height: 1; color: var(--accent-primary); opacity: 0.85; margin-bottom: 16px; }
+    .step-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .step-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+    .why-section { padding: 100px 0; border-top: 1px solid var(--border-subtle); position: relative; }
+    .why-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: center; }
+    .why-statement { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
+    .why-text-block p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
+    .why-text-block p strong { color: var(--text-main); }
+
+    .creator-section { padding: 90px 0; border-top: 1px solid var(--border-subtle); }
+    .creator-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 56px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+    .creator-avatar {
+      width: 220px;
+      height: 220px;
+      border-radius: var(--radius-md);
+      background: var(--bg-cream-tint);
+      border: 1px solid var(--border-medium);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dim);
+      position: relative;
+      overflow: hidden;
+    }
+    .creator-avatar svg { width: 72px; height: 72px; stroke: var(--text-muted); opacity: 0.6; }
+    .creator-avatar span { font-family: var(--font-mono); font-size: 0.75rem; margin-top: 12px; color: var(--text-muted); font-weight: 700; }
+    .creator-bio h3 { font-family: var(--font-display); font-size: 2rem; font-weight: 800; margin-bottom: 16px; }
+    .creator-bio p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; }
+
+    .transparency-section { padding: 90px 0; border-top: 1px solid var(--border-subtle); background: var(--bg-cream-tint); }
+    .breakdown-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .breakdown-card { background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-md); padding: 28px; box-shadow: var(--shadow-sm); }
+    .breakdown-card h4 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+    .breakdown-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .breakdown-list li { display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 0.9rem; }
+    .breakdown-list li::before { content: '✓'; color: var(--accent-primary); font-family: var(--font-mono); font-weight: 700; }
+    
+    .refund-policy-box {
+      margin-top: 40px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .refund-policy-box h5 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .refund-policy-box p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .faq-section { padding: 90px 0 100px; border-top: 1px solid var(--border-subtle); }
+    .faq-grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); overflow: hidden; transition: var(--transition); box-shadow: var(--shadow-sm); }
+    .faq-item:hover { border-color: var(--accent-primary); }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .faq-toggle-icon { font-size: 1.2rem; transition: transform 0.3s ease; color: var(--text-muted); }
+    .faq-item.active .faq-toggle-icon { transform: rotate(45deg); color: var(--accent-primary); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0, 1, 0, 1); padding: 0 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+    .faq-item.active .faq-answer { max-height: 300px; padding: 0 24px 24px; }
+
+    .site-footer { border-top: 1px solid var(--border-medium); padding: 80px 0 40px; background: var(--bg-cream-tint); }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+    .footer-brand h4 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; }
+    .footer-brand p { color: var(--text-muted); font-size: 0.95rem; max-width: 320px; line-height: 1.5; }
+    .footer-col h5 { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-main); margin-bottom: 20px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { color: var(--text-muted); font-size: 0.9rem; transition: var(--transition); }
+    .footer-links a:hover { color: var(--accent-primary); }
+    .footer-bottom { border-top: 1px solid var(--border-subtle); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim); }
+
+    /* ==========================================================================
+       MODALS
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(20, 18, 15, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .modal-backdrop.active { opacity: 1; pointer-events: auto; }
+    .modal-window {
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      transform: translateY(20px) scale(0.98);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .modal-backdrop.active .modal-window { transform: translateY(0) scale(1); }
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-cream-tint);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: var(--transition);
+      z-index: 10;
+    }
+    .modal-close-btn:hover { background: var(--border-medium); color: var(--text-main); }
+    .modal-header { padding: 32px 32px 24px; border-bottom: 1px solid var(--border-subtle); }
+    .modal-body { padding: 32px; }
+    .modal-footer { padding: 24px 32px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: flex-end; gap: 12px; background: var(--bg-cream-tint); }
+    .spot-detail-tag { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-primary); margin-bottom: 4px; font-weight: 700; }
+    .spot-detail-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; }
+    .spot-detail-price { font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; color: var(--accent-primary); margin: 16px 0; }
+    .deliverables-box { margin-top: 20px; }
+    .deliverables-box h5 { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 0.05em; }
+    .deliverables-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .deliverables-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-main); }
+    .deliverables-list li::before { content: '✦'; color: var(--accent-primary); font-size: 0.8rem; margin-top: 2px; }
+
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 8px; font-weight: 700; }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--bg-input);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .form-control:focus { outline: none; border-color: var(--accent-primary); background: #FFFFFF; box-shadow: 0 0 12px rgba(224, 43, 25, 0.15); }
+    textarea.form-control { resize: vertical; min-height: 80px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .demo-alert {
+      background: rgba(168, 106, 0, 0.08);
+      border: 1px solid rgba(168, 106, 0, 0.35);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE & MOBILE PADDING OVERHAUL (ZERO CROPPING)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .panel-body { grid-template-columns: 1fr; }
+      .panel-visual-area { border-right: none; border-bottom: 1px solid var(--border-subtle); padding: 32px 16px; }
+      .panel-sidebar { padding: 28px 16px; }
+      .panel-header-banner { flex-direction: column; align-items: stretch; }
+      .panel-meta-stats { align-items: flex-start; }
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; gap: 36px; }
+      .wildcard-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
+      .creator-box { grid-template-columns: 1fr; text-align: center; padding: 36px 20px; }
+      .creator-avatar { margin: 0 auto; }
+      .breakdown-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .container { padding: 0 14px; }
+      .campaign-tabs { flex-direction: column; gap: 8px; }
+      
+      /* Multi-View Sub-Pills Auto-Wrap to 2 Equal Columns */
+      .view-sub-pills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        width: 100%;
+      }
+      .view-sub-btn {
+        padding: 8px 4px;
+        font-size: 0.68rem;
+        text-align: center;
+      }
+      .panel-visual-area { padding: 16px 8px; }
+      .billboard-canvas-card { padding: 14px 8px; }
+      .panel-header-banner { padding: 28px 16px; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="brand-logo">
+          <span class="brand-dot"></span>
+          THE HUMAN BILLBOARD
+        </a>
+
+        <nav class="main-nav">
+          <a href="#campaigns" class="nav-link">CAMPAIGNS</a>
+          <a href="#wildcard" class="nav-link">WILDCARD STUNT</a>
+          <a href="#how-it-works" class="nav-link">HOW IT WORKS</a>
+          <a href="#why-this-exists" class="nav-link">MANIFESTO</a>
+          <a href="#transparency" class="nav-link">TRANSPARENCY</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#campaigns" class="btn btn-accent btn-sm">SPONSOR NOW</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-subhead-pill">
+          <span class="tag-badge demo">UNCONVENTIONAL PHYSICAL ADVERTISING EXPERIMENT</span>
+        </div>
+
+        <h1 class="hero-title">
+          Three ways to advertise.<br>
+          <span class="gradient-text">None of them are normal.</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Forget programmatic banner ads that get scrolled past. Put your brand physically onto extreme overland vehicles, global expedition gear, or biological human skin.
+        </p>
+
+        <div class="morph-container">
+          <span>SPONSORSHIP CANVAS:</span>
+          <div class="morph-words">
+            <span class="morph-word active" id="morph-0">CAR</span>
+            <span class="morph-word" id="morph-1">WORLD</span>
+            <span class="morph-word" id="morph-2">BODY</span>
+          </div>
+        </div>
+
+        <p class="hero-note mono">
+          Limited physical slots. Zero corporate fluff. Very questionable advertising.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#campaigns" class="btn btn-primary">CHOOSE YOUR CAMPAIGN ↓</a>
+          <a href="#how-it-works" class="btn btn-outline">HOW IT WORKS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MAIN CAMPAIGNS SECTION (3 CORE CANVASES)
+       ========================================================================== -->
+  <section class="campaigns-section" id="campaigns">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag-badge">THE THREE CORE CANVASES</span>
+        <h2 class="section-title">Select Your Campaign</h2>
+        <p class="section-desc">Each campaign represents an independent physical canvas. Exactly $50,000 in individual spots or a single $50,000 Mega Sponsor Takeover.</p>
+      </div>
+
+      <div class="campaign-tabs">
+        <button class="campaign-tab-btn active" data-target="car">
+          <span class="tab-num">01 / OVERLAND</span>
+          <span class="tab-title">🚗 FUND MY CAR</span>
+        </button>
+        <button class="campaign-tab-btn" data-target="world">
+          <span class="tab-num">02 / EXPEDITION</span>
+          <span class="tab-title">🌍 FUND MY WORLD</span>
+        </button>
+        <button class="campaign-tab-btn" data-target="tattoo">
+          <span class="tab-num">03 / PERMANENT INK</span>
+          <span class="tab-title">🖊️ FUND MY TATTOO</span>
+        </button>
+      </div>
+
+      <div class="campaign-display-box">
+
+        <!-- ====================================================================
+             01 — FUND MY CAR (REALISTIC AUTOMOTIVE BLUEPRINTS + MEGA SPONSOR)
+             ==================================================================== -->
+        <div class="campaign-panel active" id="panel-car">
+          <div class="panel-header-banner">
+            <div>
+              <span class="tag-badge" style="margin-bottom: 8px;">CAMPAIGN 01 // OVERLAND INDIA</span>
+              <h3 class="panel-headline">BUY MY CAR. I’LL DRIVE IT ACROSS INDIA.</h3>
+              <p class="panel-copy">
+                Help fund the overland vehicle and documented India road trip. Your brand logo is physically wrapped onto the car before it tackles highways, mountain passes, and chaotic city centers.
+              </p>
+            </div>
+            
+            <div class="panel-meta-stats">
+              <div class="funding-stat-card">
+                <div class="funding-row">
+                  <span class="funding-raised" id="car-raised">$0</span>
+                  <span class="funding-target">OF $50,000 GOAL</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="car-progress" style="width: 0%;"></div>
+                </div>
+                <div class="funding-sub-info">
+                  <span>0% FUNDED</span>
+                  <span class="tag-badge demo">DEMO DATA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="panel-visual-area">
+              <div class="billboard-canvas-card">
+                <!-- Multi-View Switcher -->
+                <div class="view-sub-pills">
+                  <button class="view-sub-btn active" onclick="switchSubView('car', 'side')">SIDE PROFILE</button>
+                  <button class="view-sub-btn" onclick="switchSubView('car', 'hood')">FRONT HOOD</button>
+                  <button class="view-sub-btn" onclick="switchSubView('car', 'rear')">REAR BOOT</button>
+                  <button class="view-sub-btn" style="color:var(--gold);" onclick="switchSubView('car', 'mega')">⭐ MEGA SPONSOR</button>
+                </div>
+
+                <!-- 1. REALISTIC SIDE PROFILE VIEW -->
+                <div class="subview-pane active" id="car-view-side">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 520 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="260" cy="245" rx="240" ry="14" fill="#14120F" fill-opacity="0.1"/>
+                    <rect x="150" y="42" width="210" height="12" rx="2" fill="#3D3A35"/>
+                    <rect x="170" y="24" width="70" height="18" rx="2" fill="#5C5852"/>
+                    <rect x="250" y="20" width="85" height="22" rx="2" fill="#757067"/>
+
+                    <!-- ROOF EXPEDITION RACK BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="160" y="22" width="180" height="28" rx="3" onclick="openSpotModal('car', 'c5')"/>
+                    <text x="250" y="36" fill="#E02B19" font-family="Space Mono" font-size="8" font-weight="700" text-anchor="middle" pointer-events="none">05 // ROOF EXPEDITION RACK</text>
+                    <text x="250" y="46" fill="#14120F" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">$4,500</text>
+
+                    <!-- Main SUV Chassis Body Profile -->
+                    <path d="M45 190 L75 190 C85 145 140 145 150 190 L330 190 C340 145 395 145 405 190 L465 190 C485 190 495 175 490 155 L470 120 C460 100 440 92 415 92 L330 92 L275 58 L145 58 L85 105 L50 125 C35 135 30 150 30 170 L30 180 C30 190 35 190 45 190 Z" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <path d="M150 68 L215 68 L215 118 L95 118 Z" fill="#3D3A35"/>
+                    <path d="M225 68 L285 68 L285 118 L225 118 Z" fill="#3D3A35"/>
+                    <path d="M295 68 L325 68 L400 118 L295 118 Z" fill="#3D3A35"/>
+                    <line x1="220" y1="62" x2="220" y2="190" stroke="#3D3A35" stroke-width="1.5"/>
+                    <line x1="290" y1="62" x2="290" y2="190" stroke="#3D3A35" stroke-width="1.5"/>
+
+                    <!-- Wheels -->
+                    <circle cx="112" cy="190" r="38" fill="#14120F"/>
+                    <circle cx="112" cy="190" r="22" fill="#E8E4DA" stroke="#E02B19" stroke-width="2"/>
+                    <circle cx="368" cy="190" r="38" fill="#14120F"/>
+                    <circle cx="368" cy="190" r="22" fill="#E8E4DA" stroke="#E02B19" stroke-width="2"/>
+
+                    <!-- FRONT FENDER ARCH BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="415" y="125" width="70" height="42" rx="3" onclick="openSpotModal('car', 'c6')"/>
+                    <text x="450" y="144" fill="#E02B19" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">06 // FENDER</text>
+                    <text x="450" y="156" fill="#14120F" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">$2,500</text>
+
+                    <!-- DRIVER DOOR BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="228" y="125" width="60" height="58" rx="4" onclick="openSpotModal('car', 'c2')"/>
+                    <text x="258" y="150" fill="#E02B19" font-family="Space Mono" font-size="7" font-weight="700" text-anchor="middle" pointer-events="none">02 // DRIVER</text>
+                    <text x="258" y="162" fill="#14120F" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">$9,500</text>
+
+                    <!-- PASSENGER DOOR BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="155" y="125" width="62" height="58" rx="4" onclick="openSpotModal('car', 'c3')"/>
+                    <text x="186" y="150" fill="#E02B19" font-family="Space Mono" font-size="7" font-weight="700" text-anchor="middle" pointer-events="none">03 // PASS.</text>
+                    <text x="186" y="162" fill="#14120F" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">$9,500</text>
+                  </svg>
+                </div>
+
+                <!-- 2. REALISTIC FRONT HOOD & FASCIA VIEW -->
+                <div class="subview-pane" id="car-view-hood">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 520 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="260" cy="255" rx="220" ry="14" fill="#14120F" fill-opacity="0.1"/>
+                    <rect x="140" y="20" width="240" height="12" rx="2" fill="#3D3A35"/>
+                    <path d="M155 32 L365 32 L405 105 L115 105 Z" fill="#3D3A35"/>
+                    <rect x="250" y="38" width="20" height="10" rx="2" fill="#E8E4DA"/>
+                    <rect x="85" y="95" width="25" height="16" rx="4" fill="#3D3A35"/>
+                    <rect x="410" y="95" width="25" height="16" rx="4" fill="#3D3A35"/>
+
+                    <path d="M115 105 L405 105 L435 175 L445 220 L75 220 L85 175 Z" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <line x1="150" y1="105" x2="140" y2="175" stroke="#C8C4BA" stroke-width="1.5"/>
+                    <line x1="370" y1="105" x2="380" y2="175" stroke="#C8C4BA" stroke-width="1.5"/>
+
+                    <!-- MAIN HOOD WRAP BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="150" y="112" width="220" height="58" rx="4" onclick="openSpotModal('car', 'c1')"/>
+                    <text x="260" y="140" fill="#E02B19" font-family="Space Mono" font-size="10" font-weight="700" text-anchor="middle" pointer-events="none">01 // MAIN HOOD WRAP</text>
+                    <text x="260" y="156" fill="#14120F" font-family="Space Mono" font-size="10" font-weight="700" text-anchor="middle" pointer-events="none">$16,000</text>
+
+                    <circle cx="115" cy="190" r="16" fill="#FFF" stroke="#3D3A35" stroke-width="2"/>
+                    <circle cx="405" cy="190" r="16" fill="#FFF" stroke="#3D3A35" stroke-width="2"/>
+                    <rect x="145" y="178" width="230" height="26" rx="3" fill="#14120F"/>
+                    <line x1="160" y1="191" x2="360" y2="191" stroke="#3D3A35" stroke-width="3"/>
+
+                    <rect x="90" y="210" width="340" height="34" rx="4" fill="#3D3A35"/>
+                    <!-- BUMPER MINI SPOT BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="180" y="215" width="160" height="24" rx="3" onclick="openSpotModal('car', 'c7')"/>
+                    <text x="260" y="228" fill="#E02B19" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">07 // BUMPER MINI SPOT</text>
+                    <text x="260" y="236" fill="#FFF" font-family="Space Mono" font-size="7" font-weight="700" text-anchor="middle" pointer-events="none">$1,000</text>
+                  </svg>
+                </div>
+
+                <!-- 3. REALISTIC REAR BOOT & TAILGATE VIEW -->
+                <div class="subview-pane" id="car-view-rear">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 520 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="260" cy="255" rx="220" ry="14" fill="#14120F" fill-opacity="0.1"/>
+                    <rect x="135" y="20" width="250" height="12" rx="2" fill="#3D3A35"/>
+                    <path d="M145 32 L375 32 L395 105 L125 105 Z" fill="#3D3A35"/>
+                    <line x1="150" y1="55" x2="370" y2="55" stroke="#4A463F" stroke-width="1"/>
+                    <line x1="140" y1="75" x2="380" y2="75" stroke="#4A463F" stroke-width="1"/>
+
+                    <path d="M125 105 L395 105 L420 215 L100 215 Z" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <rect x="105" y="112" width="40" height="18" rx="2" fill="#E02B19"/>
+                    <rect x="375" y="112" width="40" height="18" rx="2" fill="#E02B19"/>
+
+                    <!-- REAR BOOT / TAILGATE BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="145" y="130" width="230" height="74" rx="4" onclick="openSpotModal('car', 'c4')"/>
+                    <text x="260" y="162" fill="#E02B19" font-family="Space Mono" font-size="10" font-weight="700" text-anchor="middle" pointer-events="none">04 // REAR BOOT / TAILGATE</text>
+                    <text x="260" y="180" fill="#14120F" font-family="Space Mono" font-size="10" font-weight="700" text-anchor="middle" pointer-events="none">$7,000</text>
+
+                    <rect x="90" y="215" width="340" height="30" rx="3" fill="#3D3A35"/>
+                    <rect x="210" y="222" width="100" height="16" rx="2" fill="#5C5852"/>
+                  </svg>
+                </div>
+
+                <!-- 4. CAR MEGA SPONSOR VIEW -->
+                <div class="subview-pane" id="car-view-mega">
+                  <div class="mega-buyout-box">
+                    <span class="tag-badge demo">EXCLUSIVE TOTAL VEHICLE TAKEOVER</span>
+                    <h4 class="mega-buyout-title">BUY OUT THE ENTIRE CAR</h4>
+                    <p class="mega-buyout-desc">
+                      Take complete physical ownership of the vehicle. All 7 zones—Hood, Doors, Rear, Roof Rack, Fender, and Bumper—exclusively branded for your company across the 6,500 KM India expedition.
+                    </p>
+                    <div class="mega-buyout-price">$50,000 USD</div>
+                    <button class="btn btn-primary" onclick="openSpotModal('car', 'c_mega')">RESERVE FULL VEHICLE TAKEOVER</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Route -->
+              <div class="route-display">
+                <div class="route-header">
+                  <span class="route-title">Proposed Route (Approx. 6,500 KM)</span>
+                  <span class="tag-badge">SUBJECT TO ROAD CONDITIONS</span>
+                </div>
+                <div class="route-stops">
+                  <span class="route-city">DELHI</span><span class="route-arrow">→</span>
+                  <span class="route-city">JAIPUR</span><span class="route-arrow">→</span>
+                  <span class="route-city">AHMEDABAD</span><span class="route-arrow">→</span>
+                  <span class="route-city">MUMBAI</span><span class="route-arrow">→</span>
+                  <span class="route-city">GOA</span><span class="route-arrow">→</span>
+                  <span class="route-city">BENGALURU</span><span class="route-arrow">→</span>
+                  <span class="route-city">HYDERABAD</span><span class="route-arrow">→</span>
+                  <span class="route-city">KOLKATA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Sidebar -->
+            <div class="panel-sidebar">
+              <div class="spots-list-title">
+                <span>AVAILABLE VEHICLE SPOTS</span>
+                <span class="tag-badge">INDIVIDUAL & MEGA</span>
+              </div>
+
+              <div class="spots-grid">
+                <div class="spot-card mega-card" onclick="openSpotModal('car', 'c_mega')">
+                  <div class="spot-card-info">
+                    <h4>⭐ MEGA: FULL VEHICLE TAKEOVER</h4>
+                    <p>Exclusive buyout of all 7 spots. 100% car wrap real estate.</p>
+                  </div>
+                  <div class="spot-card-price">
+                    <span class="spot-price-val" style="color:var(--gold);">$50,000</span>
+                    <span class="spot-status mega">1 SPOT ONLY</span>
+                  </div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('car', 'c1')">
+                  <div class="spot-card-info">
+                    <h4>01 — MAIN HOOD WRAP</h4>
+                    <p>Dominant top placement visible from all drone & camera angles.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$16,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('car', 'c2')">
+                  <div class="spot-card-info">
+                    <h4>02 — DRIVER DOOR PANEL</h4>
+                    <p>Eye-level placement at checkpoints, toll plazas, and city stops.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$9,500</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('car', 'c3')">
+                  <div class="spot-card-info">
+                    <h4>03 — PASSENGER DOOR</h4>
+                    <p>Side profile placement filmed during coastal tracking shots.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$9,500</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('car', 'c4')">
+                  <div class="spot-card-info">
+                    <h4>04 — REAR BOOT / TAILGATE</h4>
+                    <p>Stuck in traffic? Every driver behind stares at your brand.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$7,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('car', 'c5')">
+                  <div class="spot-card-info">
+                    <h4>05 — ROOF EXPEDITION RACK</h4>
+                    <p>Elevated banner mount visible above normal traffic.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$4,500</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('car', 'c6')">
+                  <div class="spot-card-info">
+                    <h4>06 — FRONT FENDER ARCH</h4>
+                    <p>Tight wide-angle road placement above front wheel.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$2,500</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('car', 'c7')">
+                  <div class="spot-card-info">
+                    <h4>07 — BUMPER MINI SPOT</h4>
+                    <p>Compact decal badge on the heavy-duty steel front bumper.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$1,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+              </div>
+
+              <div style="margin-top: auto; padding-top: 10px;">
+                <p class="mono" style="font-size: 0.75rem; color: var(--text-dim);">
+                  *Note: Individual spots total $50,000, or a single Mega Sponsor can purchase the full takeover.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             02 — FUND MY WORLD (DEDICATED GEAR CANVASES + MEGA SPONSOR)
+             ==================================================================== -->
+        <div class="campaign-panel" id="panel-world">
+          <div class="panel-header-banner">
+            <div>
+              <span class="tag-badge" style="margin-bottom: 8px;">CAMPAIGN 02 // GLOBAL EXPEDITION</span>
+              <h3 class="panel-headline">SEND ME AROUND THE WORLD.</h3>
+              <p class="panel-copy">
+                Fund the global voyage. Your brand travels through international borders, airports, and city centers across dedicated technical expedition gear or as an all-inclusive Mega Sponsor.
+              </p>
+            </div>
+            
+            <div class="panel-meta-stats">
+              <div class="funding-stat-card">
+                <div class="funding-row">
+                  <span class="funding-raised" id="world-raised">$0</span>
+                  <span class="funding-target">OF $50,000 GOAL</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="world-progress" style="width: 0%;"></div>
+                </div>
+                <div class="funding-sub-info">
+                  <span>0% FUNDED</span>
+                  <span class="tag-badge demo">DEMO DATA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="panel-visual-area">
+              <div class="billboard-canvas-card">
+                <!-- World Gear Sub-Category Switcher (2-Column Grid on Mobile) -->
+                <div class="view-sub-pills">
+                  <button class="view-sub-btn active" onclick="switchSubView('world', 'jacket')">🧥 JACKET</button>
+                  <button class="view-sub-btn" onclick="switchSubView('world', 'backpack')">🎒 BACKPACK</button>
+                  <button class="view-sub-btn" onclick="switchSubView('world', 'suitcase')">🧳 SUITCASE</button>
+                  <button class="view-sub-btn" onclick="switchSubView('world', 'cap')">🧢 CAP</button>
+                  <button class="view-sub-btn" style="color:var(--gold);" onclick="switchSubView('world', 'mega')">⭐ MEGA SPONSOR</button>
+                </div>
+
+                <!-- 1. DEDICATED JACKET CANVAS (BACK, FRONT, LEFT/RIGHT ARMS) -->
+                <div class="subview-pane active" id="world-view-jacket">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M160 40 Q250 55 340 40 L450 110 L415 230 L365 200 L365 310 L135 310 L135 200 L85 230 L50 110 Z" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <path d="M200 48 Q250 64 300 48" stroke="#3D3A35" stroke-width="1.5"/>
+                    <line x1="250" y1="58" x2="250" y2="310" stroke="#C8C4BA" stroke-dasharray="2 2"/>
+
+                    <!-- LEFT ARM -->
+                    <rect class="billboard-slot-rect" x="65" y="125" width="55" height="65" rx="3" onclick="openSpotModal('world', 'w_arm_l')"/>
+                    <text x="92" y="152" fill="#E02B19" font-family="Space Mono" font-size="7" font-weight="700" text-anchor="middle" pointer-events="none">LEFT ARM</text>
+                    <text x="92" y="165" fill="#14120F" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">$4,000</text>
+
+                    <!-- RIGHT ARM -->
+                    <rect class="billboard-slot-rect" x="380" y="125" width="55" height="65" rx="3" onclick="openSpotModal('world', 'w_arm_r')"/>
+                    <text x="407" y="152" fill="#E02B19" font-family="Space Mono" font-size="7" font-weight="700" text-anchor="middle" pointer-events="none">RIGHT ARM</text>
+                    <text x="407" y="165" fill="#14120F" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">$4,000</text>
+
+                    <!-- JACKET BACK EMBROIDERY -->
+                    <rect class="billboard-slot-rect" x="155" y="85" width="190" height="95" rx="4" onclick="openSpotModal('world', 'w1')"/>
+                    <text x="250" y="128" fill="#E02B19" font-family="Space Mono" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">01 // JACKET BACK WRAP</text>
+                    <text x="250" y="148" fill="#14120F" font-family="Space Mono" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">$18,000</text>
+
+                    <!-- JACKET FRONT / CHEST EMBROIDERY -->
+                    <rect class="billboard-slot-rect" x="175" y="200" width="150" height="75" rx="4" onclick="openSpotModal('world', 'w_front')"/>
+                    <text x="250" y="232" fill="#E02B19" font-family="Space Mono" font-size="9" font-weight="700" text-anchor="middle" pointer-events="none">02 // FRONT CHEST</text>
+                    <text x="250" y="250" fill="#14120F" font-family="Space Mono" font-size="9.5" font-weight="700" text-anchor="middle" pointer-events="none">$12,000</text>
+                  </svg>
+                </div>
+
+                <!-- 2. DEDICATED BACKPACK CANVAS -->
+                <div class="subview-pane" id="world-view-backpack">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M160 80 Q250 40 340 80 L360 270 Q250 290 140 270 Z" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <rect x="210" y="32" width="80" height="18" rx="4" fill="#3D3A35"/>
+                    <rect x="135" y="130" width="230" height="145" rx="12" fill="#D5D0C5" stroke="#3D3A35" stroke-width="1.5"/>
+
+                    <!-- BACKPACK BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="160" y="145" width="180" height="110" rx="4" onclick="openSpotModal('world', 'w2')"/>
+                    <text x="250" y="195" fill="#E02B19" font-family="Space Mono" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">03 // TECHNICAL BACKPACK</text>
+                    <text x="250" y="215" fill="#14120F" font-family="Space Mono" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">$7,000</text>
+                  </svg>
+                </div>
+
+                <!-- 3. DEDICATED SUITCASE CANVAS -->
+                <div class="subview-pane" id="world-view-suitcase">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="220" y="15" width="60" height="40" rx="3" fill="#3D3A35"/>
+                    <rect x="150" y="50" width="200" height="230" rx="14" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <rect x="150" y="50" width="30" height="30" rx="4" fill="#3D3A35"/>
+                    <rect x="320" y="50" width="30" height="30" rx="4" fill="#3D3A35"/>
+                    <circle cx="180" cy="290" r="10" fill="#14120F"/>
+                    <circle cx="320" cy="290" r="10" fill="#14120F"/>
+
+                    <!-- SUITCASE MAIN BILLBOARD BOX ($3,000 AIRPORT RATE) -->
+                    <rect class="billboard-slot-rect" x="175" y="100" width="150" height="135" rx="4" onclick="openSpotModal('world', 'w3')"/>
+                    <text x="250" y="160" fill="#E02B19" font-family="Space Mono" font-size="10" font-weight="700" text-anchor="middle" pointer-events="none">06 // ROLLER SUITCASE</text>
+                    <text x="250" y="180" fill="#14120F" font-family="Space Mono" font-size="11" font-weight="700" text-anchor="middle" pointer-events="none">$3,000</text>
+                  </svg>
+                </div>
+
+                <!-- 4. DEDICATED CAP CANVAS -->
+                <div class="subview-pane" id="world-view-cap">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M150 170 Q250 80 350 170 Z" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <ellipse cx="250" cy="180" rx="140" ry="24" fill="#D5D0C5" stroke="#3D3A35" stroke-width="2"/>
+                    <circle cx="250" cy="105" r="5" fill="#3D3A35"/>
+
+                    <!-- CAP EMBROIDERED PATCH BILLBOARD BOX -->
+                    <rect class="billboard-slot-rect" x="195" y="120" width="110" height="46" rx="4" onclick="openSpotModal('world', 'w4')"/>
+                    <text x="250" y="142" fill="#E02B19" font-family="Space Mono" font-size="8.5" font-weight="700" text-anchor="middle" pointer-events="none">07 // TRAVEL CAP</text>
+                    <text x="250" y="154" fill="#14120F" font-family="Space Mono" font-size="9" font-weight="700" text-anchor="middle" pointer-events="none">$2,000</text>
+                  </svg>
+                </div>
+
+                <!-- 5. WORLD MEGA SPONSOR VIEW -->
+                <div class="subview-pane" id="world-view-mega">
+                  <div class="mega-buyout-box">
+                    <span class="tag-badge demo">EXCLUSIVE WORLD TOUR BUYOUT</span>
+                    <h4 class="mega-buyout-title">BUY OUT THE ENTIRE WORLD TOUR</h4>
+                    <p class="mega-buyout-desc">
+                      Take complete ownership of the international journey. Your brand controls the Jacket Back, Jacket Chest, Both Sleeves, Backpack, Suitcase, and Cap—plus title sponsorship in all global documentary episodes.
+                    </p>
+                    <div class="mega-buyout-price">$50,000 USD</div>
+                    <button class="btn btn-primary" onclick="openSpotModal('world', 'w_mega')">RESERVE GLOBAL EXPEDITION BUYOUT</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Proposed World Destinations -->
+              <div class="route-display">
+                <div class="route-header">
+                  <span class="route-title">Planned Tour Destinations</span>
+                  <span class="tag-badge">PROPOSED ITINERARY</span>
+                </div>
+                <div class="route-stops">
+                  <span class="route-city">TOKYO</span><span class="route-arrow">→</span>
+                  <span class="route-city">SEOUL</span><span class="route-arrow">→</span>
+                  <span class="route-city">SINGAPORE</span><span class="route-arrow">→</span>
+                  <span class="route-city">DUBAI</span><span class="route-arrow">→</span>
+                  <span class="route-city">LONDON</span><span class="route-arrow">→</span>
+                  <span class="route-city">PARIS</span><span class="route-arrow">→</span>
+                  <span class="route-city">NEW YORK</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- World Sidebar -->
+            <div class="panel-sidebar">
+              <div class="spots-list-title">
+                <span>EXPEDITION GEAR SLOTS</span>
+                <span class="tag-badge">7 SLOTS = $50,000</span>
+              </div>
+
+              <div class="spots-grid">
+                <div class="spot-card mega-card" onclick="openSpotModal('world', 'w_mega')">
+                  <div class="spot-card-info">
+                    <h4>⭐ MEGA: GLOBAL TOUR BUYOUT</h4>
+                    <p>Exclusive buyout of all gear, jacket zones, and title cards.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val" style="color:var(--gold);">$50,000</span><span class="spot-status mega">1 SPOT ONLY</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('world', 'w1')">
+                  <div class="spot-card-info">
+                    <h4>01 — JACKET BACK WRAP</h4>
+                    <p>Dominant center-back embroidery worn across all world capitals.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$18,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('world', 'w_front')">
+                  <div class="spot-card-info">
+                    <h4>02 — JACKET FRONT / CHEST</h4>
+                    <p>Primary chest placement front and center in all interview frames.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$12,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('world', 'w2')">
+                  <div class="spot-card-info">
+                    <h4>03 — TECHNICAL BACKPACK</h4>
+                    <p>Carrying camera gear daily through trains and transit hubs.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$7,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('world', 'w_arm_l')">
+                  <div class="spot-card-info">
+                    <h4>04 — JACKET LEFT ARM</h4>
+                    <p>High-contrast sleeve patch filmed in POV walking cameras.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$4,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('world', 'w_arm_r')">
+                  <div class="spot-card-info">
+                    <h4>05 — JACKET RIGHT ARM</h4>
+                    <p>Symmetrical right sleeve patch for all sideways camera tracking.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$4,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('world', 'w3')">
+                  <div class="spot-card-info">
+                    <h4>06 — HARDSHELL SUITCASE</h4>
+                    <p>Airport transit rate decal rolling through international terminals.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$3,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('world', 'w4')">
+                  <div class="spot-card-info">
+                    <h4>07 — TRAVEL CAP / ACCESSORY</h4>
+                    <p>Embroidered front crown patch worn throughout the journey.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$2,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+              </div>
+
+              <div style="margin-top: auto; padding-top: 10px;">
+                <p class="mono" style="font-size: 0.75rem; color: var(--text-dim);">
+                  *Note: Individual items sum to $50,000, or a single Mega Sponsor can purchase the full buyout.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================================================
+             03 — FUND MY TATTOO (PERMANENT FOREARM + MEGA SPONSOR)
+             ==================================================================== -->
+        <div class="campaign-panel" id="panel-tattoo">
+          <div class="panel-header-banner">
+            <div>
+              <span class="tag-badge" style="margin-bottom: 8px;">CAMPAIGN 03 // BIOLOGICAL REAL ESTATE</span>
+              <h3 class="panel-headline">FUND MY PERMANENT TATTOO.</h3>
+              <p class="panel-copy">
+                Permanent means permanent. Real needle, real skin, and zero deletion button. Your brand or typographic concept is integrated into a bespoke sleeve on my left forearm for life.
+              </p>
+            </div>
+            
+            <div class="panel-meta-stats">
+              <div class="funding-stat-card">
+                <div class="funding-row">
+                  <span class="funding-raised" id="tattoo-raised">$0</span>
+                  <span class="funding-target">OF $50,000 GOAL</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="tattoo-progress" style="width: 0%;"></div>
+                </div>
+                <div class="funding-sub-info">
+                  <span>0% FUNDED</span>
+                  <span class="tag-badge demo">DEMO DATA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="panel-visual-area">
+              <div class="billboard-canvas-card">
+                <div class="view-sub-pills">
+                  <button class="view-sub-btn active" onclick="switchSubView('tattoo', 'forearm')">FOREARM CANVAS</button>
+                  <button class="view-sub-btn" style="color:var(--gold);" onclick="switchSubView('tattoo', 'mega')">⭐ MEGA SPONSOR</button>
+                </div>
+
+                <!-- 1. FOREARM CANVAS -->
+                <div class="subview-pane active" id="tattoo-view-forearm">
+                  <svg class="billboard-svg-wrap" viewBox="0 0 400 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M120 40 C130 160 110 360 140 520 C170 530 240 530 260 520 C280 380 270 180 280 40 Z" fill="#E8E4DA" stroke="#3D3A35" stroke-width="2"/>
+                    <line x1="130" y1="120" x2="275" y2="120" stroke="#C8C4BA" stroke-dasharray="2 2"/>
+                    <line x1="125" y1="260" x2="272" y2="260" stroke="#C8C4BA" stroke-dasharray="2 2"/>
+                    <line x1="135" y1="420" x2="265" y2="420" stroke="#C8C4BA" stroke-dasharray="2 2"/>
+
+                    <!-- 02 // UPPER FOREARM BAND -->
+                    <rect class="billboard-slot-rect" x="140" y="55" width="120" height="55" rx="4" onclick="openSpotModal('tattoo', 't2')"/>
+                    <text x="200" y="80" fill="#E02B19" font-family="Space Mono" font-size="9" font-weight="700" text-anchor="middle" pointer-events="none">02 // UPPER BAND</text>
+                    <text x="200" y="96" fill="#14120F" font-family="Space Mono" font-size="8.5" font-weight="700" text-anchor="middle" pointer-events="none">$12,000</text>
+
+                    <!-- 01 // MAIN FEATURE -->
+                    <rect class="billboard-slot-rect" x="145" y="135" width="110" height="95" rx="4" onclick="openSpotModal('tattoo', 't1')"/>
+                    <text x="200" y="175" fill="#E02B19" font-family="Space Mono" font-size="9.5" font-weight="700" text-anchor="middle" pointer-events="none">01 // MAIN FEATURE</text>
+                    <text x="200" y="195" fill="#14120F" font-family="Space Mono" font-size="9.5" font-weight="700" text-anchor="middle" pointer-events="none">$25,000</text>
+
+                    <!-- 03 // LOWER FOREARM BADGE -->
+                    <rect class="billboard-slot-rect" x="150" y="255" width="100" height="70" rx="4" onclick="openSpotModal('tattoo', 't3')"/>
+                    <text x="200" y="285" fill="#E02B19" font-family="Space Mono" font-size="8.5" font-weight="700" text-anchor="middle" pointer-events="none">03 // LOWER BADGE</text>
+                    <text x="200" y="302" fill="#14120F" font-family="Space Mono" font-size="8" font-weight="700" text-anchor="middle" pointer-events="none">$8,000</text>
+
+                    <!-- 04 // WRIST MICRO GLYPH -->
+                    <rect class="billboard-slot-rect" x="160" y="350" width="80" height="50" rx="4" onclick="openSpotModal('tattoo', 't4')"/>
+                    <text x="200" y="372" fill="#E02B19" font-family="Space Mono" font-size="8" font-weight="700" text-anchor="middle" pointer-events="none">04 // WRIST GLYPH</text>
+                    <text x="200" y="386" fill="#14120F" font-family="Space Mono" font-size="7.5" font-weight="700" text-anchor="middle" pointer-events="none">$5,000</text>
+                  </svg>
+                </div>
+
+                <!-- 2. TATTOO MEGA SPONSOR VIEW -->
+                <div class="subview-pane" id="tattoo-view-mega">
+                  <div class="mega-buyout-box">
+                    <span class="tag-badge demo">EXCLUSIVE ENTIRE FOREARM BUYOUT</span>
+                    <h4 class="mega-buyout-title">BUY OUT THE ENTIRE FOREARM</h4>
+                    <p class="mega-buyout-desc">
+                      Sole physical ownership of the arm. No other brands or symbols. The entire typographic sleeve is custom-designed around your brand for life.
+                    </p>
+                    <div class="mega-buyout-price">$50,000 USD</div>
+                    <button class="btn btn-primary" onclick="openSpotModal('tattoo', 't_mega')">RESERVE EXCLUSIVE FOREARM</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="permanent-warning-box">
+                <div class="permanent-warning-header">
+                  <span>⚠ MANDATORY NOTICE: PERMANENT MEANS PERMANENT</span>
+                </div>
+                <p class="permanent-warning-copy">
+                  This is applied with real tattoo needles into biological dermis. It will not wash off. Artwork is subject to mutual aesthetic curation with a licensed professional studio. No hate speech or offensive symbols.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tattoo Sidebar -->
+            <div class="panel-sidebar">
+              <div class="spots-list-title">
+                <span>DERMAL REAL ESTATE</span>
+                <span class="tag-badge">4 ZONES = $50,000</span>
+              </div>
+
+              <div class="spots-grid">
+                <div class="spot-card mega-card" onclick="openSpotModal('tattoo', 't_mega')">
+                  <div class="spot-card-info">
+                    <h4>⭐ MEGA: ENTIRE SLEEVE BUYOUT</h4>
+                    <p>Exclusive buyout of the entire forearm. Sole brand ownership.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val" style="color:var(--gold);">$50,000</span><span class="spot-status mega">1 SPOT ONLY</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('tattoo', 't1')">
+                  <div class="spot-card-info">
+                    <h4>01 — MAIN SLEEVE FEATURE</h4>
+                    <p>Dominant 4x3" typographic centerpiece. Permanently inked, never hidden.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$25,000</span><span class="spot-status">1 SPOT ONLY</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('tattoo', 't2')">
+                  <div class="spot-card-info">
+                    <h4>02 — UPPER FOREARM BAND</h4>
+                    <p>Horizontally aligned text/monogram circling the upper muscle permanently.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$12,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('tattoo', 't3')">
+                  <div class="spot-card-info">
+                    <h4>03 — LOWER FOREARM BADGE</h4>
+                    <p>Compact geometric emblem integrated permanently into the arm linework.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$8,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+
+                <div class="spot-card" onclick="openSpotModal('tattoo', 't4')">
+                  <div class="spot-card-info">
+                    <h4>04 — WRIST MICRO GLYPH</h4>
+                    <p>Permanent minimalist 1x1" coordinate or glyph mark near the wrist joint.</p>
+                  </div>
+                  <div class="spot-card-price"><span class="spot-price-val">$5,000</span><span class="spot-status">AVAILABLE</span></div>
+                </div>
+              </div>
+
+              <div style="margin-top: auto; padding-top: 10px;">
+                <button class="btn btn-outline btn-sm" style="width: 100%;" onclick="alert('Our tattoo direction merges architectural brutalism, cyber-typography, and high-contrast lines. Consultations occur with an accredited studio before ink application.')">
+                  VIEW TATTOO STYLE CONCEPTS
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WILDCARD STUNT SECTION (SECONDARY FEATURED TIER)
+       ========================================================================== -->
+  <section class="wildcard-section" id="wildcard">
+    <div class="container">
+      <div class="wildcard-card">
+        <div>
+          <span class="wildcard-tag">CUSTOM EXPERIMENT // WILDCARD STUNT</span>
+          <h3 class="wildcard-title">HAVE AN EVEN WORSE IDEA?</h3>
+          <p class="wildcard-desc">
+            Think your brand deserves something completely different? Propose a custom real-world stunt. If it's legal, physically possible, and absurd enough, let's talk.
+          </p>
+        </div>
+        <div class="wildcard-action-box">
+          <span class="wildcard-price-label">MINIMUM COMMITMENT</span>
+          <div class="wildcard-price-value">$10,000 USD</div>
+          <button class="btn btn-primary" style="width: 100%;" onclick="openWildcardModal()">PITCH A CUSTOM STUNT</button>
+          <p class="wildcard-note">Starting at $10,000 · Manual approval required</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HOW IT WORKS
+       ========================================================================== -->
+  <section class="how-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag-badge">THE PROTOCOL</span>
+        <h2 class="section-title">Four Steps to Becoming a Human Billboard</h2>
+        <p class="section-desc">A frictionless, transparent process designed for companies that value memorable branding over sterile impressions.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3 class="step-title">CHOOSE YOUR ABSURDITY</h3>
+          <p class="step-desc">Pick your physical canvas: an overland vehicle crossing India, global expedition gear, or biological ink on skin.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3 class="step-title">PICK YOUR SPOT OR GO MEGA</h3>
+          <p class="step-desc">Select an individual physical placement, or claim an entire $50,000 Mega Sponsor takeover for complete ownership.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3 class="step-title">SUBMIT DETAILS & LOCK</h3>
+          <p class="step-desc">Provide your brand vector assets and brand message. All placements are manually vetted to prevent spam.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3 class="step-title">BECOME THE STORY</h3>
+          <p class="step-desc">Your brand is permanently documented in high-res travel media, live dispatches, and the public campaign record.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MANIFESTO
+       ========================================================================== -->
+  <section class="why-section" id="why-this-exists">
+    <div class="container">
+      <div class="why-grid">
+        <div>
+          <span class="tag-badge" style="margin-bottom: 16px;">THE MANIFESTO</span>
+          <h2 class="why-statement">
+            Traditional ads disappear into feeds.<br>
+            <span class="gradient-text">This doesn't.</span>
+          </h2>
+        </div>
+        <div class="why-text-block">
+          <p>
+            The internet is drowning in programmatic banner impressions that nobody looks at and everybody blocks. Billions of dollars spent to be ignored by fatigued consumers in microseconds.
+          </p>
+          <p>
+            <strong>The Human Billboard is the antithesis of sterile digital ads.</strong> It’s a physical, visceral stunt. A car battling monsoon roads in Mumbai. A jacket carrying your emblem through Tokyo subway platforms. A piece of skin stamped permanently with your identity.
+          </p>
+          <p>
+            We don't promise 10x ROI or mathematical click-through conversions. We promise <strong>unforgettable physical presence and documented cultural absurdity.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT CREATOR (NO SOCIAL HANDLES)
+       ========================================================================== -->
+  <section class="creator-section">
+    <div class="container">
+      <div class="creator-box">
+        <div class="creator-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>HUMAN #01</span>
+        </div>
+
+        <div class="creator-bio">
+          <span class="tag-badge" style="margin-bottom: 8px;">THE EXPERIMENTER</span>
+          <h3>Hey. I’m the Human.</h3>
+          <p>
+            I’m turning sponsorship into a transparent public experiment. Rather than chasing algorithm metrics or selling sterile sidebar pixels, I’m giving brands the chance to be woven directly into real adventures, physical machines, and documented road trips.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TRANSPARENCY & REFUND TIMEFRAME
+       ========================================================================== -->
+  <section class="transparency-section" id="transparency">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag-badge">RADICAL CLARITY</span>
+        <h2 class="section-title">Where Does the Money Go?</h2>
+        <p class="section-desc">We operate on complete transparency. Each $50,000 budget directly finances the specific physical hardware, logistics, studio fees, and media production.</p>
+      </div>
+
+      <div class="breakdown-grid">
+        <div class="breakdown-card">
+          <h4>🚗 01 — CAR TRIP ($50K)</h4>
+          <ul class="breakdown-list">
+            <li>Vehicle acquisition & registration: $28,000</li>
+            <li>Mechanical overhaul & all-terrain prep: $8,000</li>
+            <li>Commercial-grade vinyl wrap: $4,000</li>
+            <li>Fuel, state highway tolls & checkpoint permits: $5,000</li>
+            <li>Emergency repairs & accommodation: $3,000</li>
+            <li>High-definition camera gear & production: $2,000</li>
+          </ul>
+        </div>
+
+        <div class="breakdown-card">
+          <h4>🌍 02 — WORLD EXPEDITION ($50K)</h4>
+          <ul class="breakdown-list">
+            <li>International multi-city flights & rail: $18,000</li>
+            <li>Visa fees & travel documentation: $4,000</li>
+            <li>Commercial embroidered outerwear: $5,000</li>
+            <li>Backpack & hard-case luggage branding: $3,000</li>
+            <li>Local city logistics & accommodation: $12,000</li>
+            <li>Global 4K content documentation & edits: $8,000</li>
+          </ul>
+        </div>
+
+        <div class="breakdown-card">
+          <h4>🖊️ 03 — PERMANENT TATTOO ($50K)</h4>
+          <ul class="breakdown-list">
+            <li>Top-tier studio, master artist & custom typography: $4,000</li>
+            <li>Documentary film crew & production: $3,000</li>
+            <li>Medical-grade aftercare & studio travel: $1,000</li>
+            <li><strong>Lifetime biological skin lease / 24/7 body rent: $42,000</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ALL-OR-NOTHING 60-DAY REFUND DISCLOSURE -->
+      <div class="refund-policy-box">
+        <h5>⚖ 60-DAY ALL-OR-NOTHING TARGET & REFUND POLICY</h5>
+        <p>
+          Each campaign has an activation threshold of <strong>$50,000 within a 60-day window</strong>. Physical production (vehicle purchase, international travel bookings, or needle hitting skin) only commences once 100% of the milestone is funded.
+          <br><br>
+          If a campaign does not reach $50,000 by Day 60, all sponsors will receive a <strong>100% refund of pledged funds</strong> minus actual third-party payment processing fees (~2.9%–3.5% for credit card interchange; 0% deduction for direct wire or crypto escrow). Alternatively, sponsors can elect a <strong>100% full-value transfer (zero fees deducted)</strong> to roll their funds into another active campaign.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ SECTION
+       ========================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag-badge">ANSWERS</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Direct answers without marketing spin.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>When does each adventure actually happen?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            An adventure ONLY launches when 100% of the spots (or a Mega Sponsor buyout) are funded within the 60-day campaign window. Once funded, hardware procurement, vinyl wrapping, flight schedules, or tattoo studio dates are immediately executed and publicly documented.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What happens if the $50,000 target isn't reached?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            If all spots aren't sold within 60 days, the campaign closes and refunds are triggered automatically. You receive 100% of your pledge back minus standard third-party merchant gateway charges (~2.9% to 3.5% for credit cards; 0% for wire transfers). If you prefer, you can roll 100% of your pledge into another active campaign with zero deductions.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the $50,000 Mega Sponsor option?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Each campaign allows a single brand to execute a total buyout for $50,000. In the Car campaign, you own the entire car wrap exclusively. In the World campaign, you control all gear (jacket, backpack, suitcase, cap) and receive title billing. In the Tattoo campaign, you own the entire biological forearm with zero co-sponsors.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the $10,000 Wildcard Stunt work?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            If you want a bespoke real-world stunt outside of the Car, World, or Tattoo canvases, you can propose it. As long as it is legal, physically achievable, and absurd enough to document, we will review the concept and scope the logistics. Minimum commitment starts at $10,000.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Where does my logo appear?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Your logo appears in the exact zone selected during checkout—for example, the vehicle bonnet ($16,000), the travel jacket's back ($18,000), the suitcase shell ($3,000), or the forearm sleeve ($25,000). It also lives permanently on the web archive.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I provide my own logo vector?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. We require vector files (.SVG, .AI, or high-res .PNG). Our production team creates a placement mockup for your written sign-off before vinyl printing, embroidery, or tattoo stenciling begins.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Is the tattoo actually permanent?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. It is applied by a licensed professional tattoo artist using standard needle injection into biological dermis. It will not wash off. That is the entire point of the campaign.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>THE HUMAN BILLBOARD</h4>
+          <p>Three ways to advertise. None of them are normal.</p>
+          <div style="margin-top: 16px;">
+            <span class="tag-badge demo">EXPERIMENT PLATFORM</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>CAMPAIGNS</h5>
+          <ul class="footer-links">
+            <li><a href="#campaigns" onclick="switchCampaign('car')">🚗 FUND MY CAR ($50K)</a></li>
+            <li><a href="#campaigns" onclick="switchCampaign('world')">🌍 FUND MY WORLD ($50K)</a></li>
+            <li><a href="#campaigns" onclick="switchCampaign('tattoo')">🖊️ FUND MY TATTOO ($50K)</a></li>
+            <li><a href="#wildcard">🔥 WILDCARD STUNT ($10K+)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>DOCUMENTATION</h5>
+          <ul class="footer-links">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#transparency">Where Money Goes</a></li>
+            <li><a href="#transparency">60-Day Refund Policy</a></li>
+            <li><a href="#faq">Sponsor FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>LEGAL & POLICIES</h5>
+          <ul class="footer-links">
+            <li><a href="#faq" onclick="alert('Standard commercial sponsorship agreement terms apply. Placements subject to approval.')">Terms of Sponsorship</a></li>
+            <li><a href="#faq" onclick="alert('All client contact information is kept strictly confidential and never shared.')">Privacy Policy</a></li>
+            <li><a href="#transparency">Refund Disclosure</a></li>
+            <li><a href="mailto:sponsor@humanbillboard.demo">Contact Desk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 THE HUMAN BILLBOARD. All physical rights reserved.</span>
+        <span>Physical real-world sponsorships. Demo environment.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: SPOT DETAILS
+       ========================================================================== -->
+  <div class="modal-backdrop" id="spot-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeSpotModal()">✕</button>
+      <div class="modal-header">
+        <span class="spot-detail-tag" id="modal-spot-tag">ZONE DETAILS</span>
+        <h3 class="spot-detail-title" id="modal-spot-title">HOOD WRAP</h3>
+      </div>
+      <div class="modal-body">
+        <div class="spot-detail-price" id="modal-spot-price">$16,000 USD</div>
+        <p id="modal-spot-desc" style="color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;"></p>
+        <div class="deliverables-box">
+          <h5>WHAT YOU GET AS A SPONSOR</h5>
+          <ul class="deliverables-list" id="modal-spot-deliverables"></ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="closeSpotModal()">CLOSE</button>
+        <button class="btn btn-accent" id="modal-sponsor-btn" onclick="proceedToCheckout()">SPONSOR THIS SPOT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: DEMO CHECKOUT
+       ========================================================================== -->
+  <div class="modal-backdrop" id="checkout-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeCheckoutModal()">✕</button>
+      <div class="modal-header">
+        <span class="tag-badge demo">CHECKOUT STEP 02</span>
+        <h3 class="spot-detail-title" style="margin-top: 6px;">Secure Sponsorship Slot</h3>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">You're about to become part of the adventure.</p>
+      </div>
+      <div class="modal-body">
+        <div class="demo-alert">
+          <span>⚠ DEMO CHECKOUT — PAYMENT SYSTEM CURRENTLY NOT CONNECTED</span>
+        </div>
+        <form id="checkout-form" onsubmit="handleDemoSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Brand / Company Name *</label>
+              <input type="text" class="form-control" placeholder="e.g. Acme Labs" required>
+            </div>
+            <div class="form-group">
+              <label>Contact Name *</label>
+              <input type="text" class="form-control" placeholder="e.g. Jane Doe" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" class="form-control" placeholder="jane@acme.com" required>
+            </div>
+            <div class="form-group">
+              <label>Company Website</label>
+              <input type="url" class="form-control" placeholder="https://acme.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Campaign Canvas</label>
+              <input type="text" class="form-control" id="checkout-campaign-field" readonly>
+            </div>
+            <div class="form-group">
+              <label>Selected Spot & Price</label>
+              <input type="text" class="form-control" id="checkout-spot-field" readonly style="color: var(--accent-primary); font-weight: bold;">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Logo Upload (.SVG / .PNG / .AI)</label>
+            <input type="file" class="form-control" accept=".svg,.png,.jpg,.ai">
+          </div>
+          <div class="form-group">
+            <label>Custom Brand Note / Placement Instructions</label>
+            <textarea class="form-control" placeholder="Tell us if you have specific placement instructions or requirements..."></textarea>
+          </div>
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <button type="submit" class="btn btn-primary" style="flex: 1;">PAY WITH CARD ($)</button>
+            <button type="submit" class="btn btn-accent" style="flex: 1;">PAY WITH CRYPTO (SOL/USDC)</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: WILDCARD STUNT PITCH
+       ========================================================================== -->
+  <div class="modal-backdrop" id="wildcard-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeWildcardModal()">✕</button>
+      <div class="modal-header">
+        <span class="tag-badge demo">CUSTOM EXPERIMENT // WILDCARD</span>
+        <h3 class="spot-detail-title" style="margin-top: 6px;">Propose a Custom Stunt</h3>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Minimum $10,000 USD commitment. Subject to manual review.</p>
+      </div>
+      <div class="modal-body">
+        <div class="demo-alert">
+          <span>⚠ DEMO MODE — PROPOSAL DESK PREVIEW</span>
+        </div>
+        <form onsubmit="handleWildcardSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Brand / Founder Name *</label>
+              <input type="text" class="form-control" placeholder="e.g. Apex Dynamics" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" class="form-control" placeholder="founder@apexdynamics.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Proposed Budget (Minimum $10,000) *</label>
+            <input type="text" class="form-control" value="$10,000 USD" required>
+          </div>
+          <div class="form-group">
+            <label>Pitch the Stunt Concept *</label>
+            <textarea class="form-control" placeholder="Describe the physical stunt you want executed to promote your brand. Keep it legal, physically achievable, and memorable..." rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">SUBMIT STUNT PROPOSAL FOR REVIEW</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    // =========================================================================
+    // 01. CAMPAIGN DATA REPOSITORY (EXACTLY $50,000 PER CAMPAIGN)
+    // =========================================================================
+    const SPONSORSHIP_DATA = {
+      car: {
+        name: "🚗 FUND MY CAR",
+        goal: 50000,
+        spots: {
+          c_mega: {
+            title: "⭐ MEGA: FULL VEHICLE TAKEOVER",
+            price: 50000,
+            desc: "Complete 100% vehicle advertising exclusivity. Covers all 7 individual wrap zones: Hood, Doors, Rear, Roof Rack, Fender, and Bumper. No other sponsors allowed.",
+            deliverables: [
+              "Sole exclusive brand wrap across the entire overland car",
+              "Primary title sponsorship in all India road trip episodes",
+              "Top prominent placement across all media and web archives",
+              "Exclusive 4K photography package featuring only your brand",
+              "Complete brand takeover of all vehicle promotional materials"
+            ]
+          },
+          c1: {
+            title: "01 — MAIN HOOD WRAP",
+            price: 16000,
+            desc: "The primary hood placement across the front of the overland vehicle. Captured in oncoming road footage, drone flyovers, and hero photos.",
+            deliverables: [
+              "Physical vinyl wrap across the center hood",
+              "Feature mention in all highway video dispatches",
+              "Permanent placement on the Human Billboard website",
+              "High-resolution photo asset pack featuring the vehicle"
+            ]
+          },
+          c2: {
+            title: "02 — DRIVER DOOR PANEL",
+            price: 9500,
+            desc: "Eye-level real estate seen at driver checkpoints, toll booths, and roadside interviews.",
+            deliverables: [
+              "Heavy-duty vinyl decal across driver door",
+              "Inclusion in window-facing vlogs",
+              "Website sponsor archive entry"
+            ]
+          },
+          c3: {
+            title: "03 — PASSENGER DOOR PANEL",
+            price: 9500,
+            desc: "Profile panel filmed in side tracking shots across coastal highways.",
+            deliverables: [
+              "Passenger door vinyl placement",
+              "Featured in side tracking footage",
+              "Permanent online sponsor wall presence"
+            ]
+          },
+          c4: {
+            title: "04 — REAR BOOT / TAILGATE",
+            price: 7000,
+            desc: "Direct line-of-sight for every motorist stuck behind the overland car in Indian traffic.",
+            deliverables: [
+              "Rear boot tailgate vinyl wrap",
+              "Rear follower camera visibility",
+              "Online brand roster listing"
+            ]
+          },
+          c5: {
+            title: "05 — ROOF EXPEDITION RACK",
+            price: 4500,
+            desc: "Elevated banner mounted on the overland roof cargo cage.",
+            deliverables: [
+              "Weatherproof metal/acrylic panel on roof cage",
+              "High-angle drone visibility in open landscapes"
+            ]
+          },
+          c6: {
+            title: "06 — FRONT FENDER ARCH",
+            price: 2500,
+            desc: "Front-quarter panel decal sitting directly above the front wheel arch.",
+            deliverables: [
+              "Front fender decal placement",
+              "Documentary inclusion in vehicle walk-arounds"
+            ]
+          },
+          c7: {
+            title: "07 — BUMPER MINI SPOT",
+            price: 1000,
+            desc: "Compact durable decal on the reinforced front steel bull-bar bumper.",
+            deliverables: [
+              "Badge decal on the steel front bumper",
+              "Website sponsor wall credit"
+            ]
+          }
+        }
+      },
+      world: {
+        name: "🌍 FUND MY WORLD",
+        goal: 50000,
+        spots: {
+          w_mega: {
+            title: "⭐ MEGA: GLOBAL TOUR BUYOUT",
+            price: 50000,
+            desc: "Total exclusive buyout of the entire world journey. You own all gear branding—Jacket Back, Jacket Front, Both Arms, Backpack, Suitcase, and Cap—plus title sponsorship across every video dispatch.",
+            deliverables: [
+              "Exclusive branding across 100% of expedition apparel and gear",
+              "Title sponsor credit in every world travel video episode",
+              "Top headline placement on the Human Billboard website",
+              "Dedicated city-specific brand feature filmed in Tokyo, London, or New York"
+            ]
+          },
+          w1: {
+            title: "01 — JACKET BACK WRAP",
+            price: 18000,
+            desc: "Dominant center-back embroidered logo on the core expedition jacket worn through international airport terminals and world cities.",
+            deliverables: [
+              "Full center-back high-contrast embroidery",
+              "Featured in all third-person walking camera shots",
+              "Permanent web sponsor listing"
+            ]
+          },
+          w_front: {
+            title: "02 — JACKET FRONT / CHEST",
+            price: 12000,
+            desc: "High-visibility chest embroidery right in the center of all interview frames and selfie video streams.",
+            deliverables: [
+              "Primary chest embroidery on outerwear",
+              "Prominent face-camera visibility",
+              "Website sponsor wall inclusion"
+            ]
+          },
+          w2: {
+            title: "03 — TECHNICAL BACKPACK",
+            price: 7000,
+            desc: "Stitched patch on the daily technical daypack carrying all camera equipment across international transit hubs.",
+            deliverables: [
+              "Durable patch on main backpack panel",
+              "Visible in transit vlogs & walking dispatches",
+              "Website sponsor archive entry"
+            ]
+          },
+          w_arm_l: {
+            title: "04 — JACKET LEFT ARM",
+            price: 4000,
+            desc: "High-contrast left sleeve patch filmed continuously during gestures and POV walking footage.",
+            deliverables: [
+              "High-durability left sleeve arm patch",
+              "POV vlog appearances",
+              "Web sponsor wall listing"
+            ]
+          },
+          w_arm_r: {
+            title: "05 — JACKET RIGHT ARM",
+            price: 4000,
+            desc: "Symmetrical right sleeve patch for all sideways tracking camera shots.",
+            deliverables: [
+              "High-durability right sleeve arm patch",
+              "Sideways tracking video appearances",
+              "Web sponsor wall listing"
+            ]
+          },
+          w3: {
+            title: "06 — HARDSHELL SUITCASE",
+            price: 3000,
+            desc: "Airport transit rate decal rolling through 7+ world international transit hubs, baggage claims, and subways.",
+            deliverables: [
+              "Large vinyl decal on hardshell luggage",
+              "Baggage claim & airport transit video appearances",
+              "Permanent sponsor wall listing"
+            ]
+          },
+          w4: {
+            title: "07 — TRAVEL CAP / ACCESSORY",
+            price: 2000,
+            desc: "Front crown embroidered patch on the travel baseball cap worn daily in coffee shops, co-working spaces, and city streets.",
+            deliverables: [
+              "Front crown cap embroidery",
+              "Daily casual video appearances",
+              "Web sponsor listing"
+            ]
+          }
+        }
+      },
+      tattoo: {
+        name: "🖊️ FUND MY TATTOO",
+        goal: 50000,
+        spots: {
+          t_mega: {
+            title: "⭐ MEGA: ENTIRE SLEEVE BUYOUT",
+            price: 50000,
+            desc: "Sole biological ownership of the forearm. No other brands or symbols. The entire typographic sleeve is tailored exclusively around your brand identity.",
+            deliverables: [
+              "Exclusive ownership of the complete left forearm tattoo sleeve",
+              "Zero co-sponsors on skin",
+              "Dedicated 4K studio documentary chronicling the entire inking process",
+              "Lifetime physical biological billboard on human skin"
+            ]
+          },
+          t1: {
+            title: "01 — MAIN FOREARM FEATURE",
+            price: 25000,
+            desc: "A bold 4x3 inch bespoke typographic centerpiece placed directly on the outer left forearm. Permanently inked using standard dermal needles.",
+            deliverables: [
+              "Permanent ink applied by a certified master tattoo artist",
+              "Collaborative design and typographic curation",
+              "Documentary inclusion of the inking process",
+              "Lifetime advertising on skin"
+            ]
+          },
+          t2: {
+            title: "02 — UPPER FOREARM BAND",
+            price: 12000,
+            desc: "A stylized geometric typographic band wrapping cleanly around the upper forearm muscle structure for life.",
+            deliverables: [
+              "Permanent studio tattoo application",
+              "Vector design sign-off",
+              "Studio inking feature vlog inclusion"
+            ]
+          },
+          t3: {
+            title: "03 — LOWER FOREARM BADGE",
+            price: 8000,
+            desc: "A compact 2x2 inch geometric emblem integrated permanently into the arm linework.",
+            deliverables: [
+              "Permanent geometric ink badge",
+              "Final design approval prior to session",
+              "Permanent website wall listing"
+            ]
+          },
+          t4: {
+            title: "04 — WRIST MICRO GLYPH",
+            price: 5000,
+            desc: "A subtle, high-taste 1x1 inch micro glyph or coordinate mark near the wrist joint.",
+            deliverables: [
+              "Permanent micro glyph tattoo",
+              "Video documentation of the tattoo session"
+            ]
+          }
+        }
+      }
+    };
+
+    let currentSelectedCampaign = 'car';
+    let currentSelectedSpot = null;
+
+    // 02. MORPHING WORDS
+    const morphWords = ['CAR', 'WORLD', 'BODY'];
+    let morphIndex = 0;
+    setInterval(() => {
+      const currentEl = document.getElementById(`morph-${morphIndex}`);
+      if (currentEl) currentEl.classList.remove('active');
+      morphIndex = (morphIndex + 1) % morphWords.length;
+      const nextEl = document.getElementById(`morph-${morphIndex}`);
+      if (nextEl) nextEl.classList.add('active');
+    }, 2400);
+
+    // 03. CAMPAIGN TABS
+    const tabButtons = document.querySelectorAll('.campaign-tab-btn');
+    const panels = document.querySelectorAll('.campaign-panel');
+    function switchCampaign(campaignKey) {
+      currentSelectedCampaign = campaignKey;
+      tabButtons.forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-target') === campaignKey));
+      panels.forEach(panel => panel.classList.toggle('active', panel.id === `panel-${campaignKey}`));
+    }
+    tabButtons.forEach(button => button.addEventListener('click', () => switchCampaign(button.getAttribute('data-target'))));
+
+    // 04. SUB-VIEW SWITCHER
+    function switchSubView(campaignKey, viewKey) {
+      const panel = document.getElementById(`panel-${campaignKey}`);
+      if (!panel) return;
+      panel.querySelectorAll('.view-sub-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${viewKey}'`));
+      });
+      panel.querySelectorAll('.subview-pane').forEach(pane => pane.classList.remove('active'));
+      const targetPane = document.getElementById(`${campaignKey}-view-${viewKey}`);
+      if (targetPane) targetPane.classList.add('active');
+    }
+
+    // 05. SPOT MODAL
+    const spotModal = document.getElementById('spot-modal');
+    const modalSpotTag = document.getElementById('modal-spot-tag');
+    const modalSpotTitle = document.getElementById('modal-spot-title');
+    const modalSpotPrice = document.getElementById('modal-spot-price');
+    const modalSpotDesc = document.getElementById('modal-spot-desc');
+    const modalSpotDeliverables = document.getElementById('modal-spot-deliverables');
+
+    function openSpotModal(campaignKey, spotKey) {
+      const campaign = SPONSORSHIP_DATA[campaignKey];
+      const spot = campaign.spots[spotKey];
+      if (!spot) return;
+
+      currentSelectedCampaign = campaignKey;
+      currentSelectedSpot = spot;
+
+      modalSpotTag.innerText = `${campaign.name} // SLOT SELECTION`;
+      modalSpotTitle.innerText = spot.title;
+      modalSpotPrice.innerText = `$${spot.price.toLocaleString()} USD`;
+      modalSpotDesc.innerText = spot.desc;
+
+      modalSpotDeliverables.innerHTML = '';
+      spot.deliverables.forEach(item => {
+        const li = document.createElement('li');
+        li.innerText = item;
+        modalSpotDeliverables.appendChild(li);
+      });
+
+      spotModal.classList.add('active');
+    }
+
+    function closeSpotModal() { spotModal.classList.remove('active'); }
+
+    // 06. CHECKOUT MODAL
+    const checkoutModal = document.getElementById('checkout-modal');
+    const checkoutCampaignField = document.getElementById('checkout-campaign-field');
+    const checkoutSpotField = document.getElementById('checkout-spot-field');
+
+    function proceedToCheckout() {
+      closeSpotModal();
+      if (!currentSelectedSpot) return;
+      checkoutCampaignField.value = SPONSORSHIP_DATA[currentSelectedCampaign].name;
+      checkoutSpotField.value = `${currentSelectedSpot.title} — $${currentSelectedSpot.price.toLocaleString()} USD`;
+      checkoutModal.classList.add('active');
+    }
+
+    function closeCheckoutModal() { checkoutModal.classList.remove('active'); }
+    function handleDemoSubmit(e) {
+      e.preventDefault();
+      alert('DEMO CHECKOUT: This website is currently in demo preview mode. The live payment processing gateway is not connected. No charges have been made.');
+      closeCheckoutModal();
+    }
+
+    // 07. WILDCARD MODAL
+    const wildcardModal = document.getElementById('wildcard-modal');
+    function openWildcardModal() { wildcardModal.classList.add('active'); }
+    function closeWildcardModal() { wildcardModal.classList.remove('active'); }
+    function handleWildcardSubmit(e) {
+      e.preventDefault();
+      alert('WILDCARD PROPOSAL SUBMITTED (DEMO): Thank you! In production, our review team assesses the stunt feasibility, legal parameters, and filming logistics before sending custom invoice terms.');
+      closeWildcardModal();
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { closeSpotModal(); closeCheckoutModal(); closeWildcardModal(); }
+    });
+    [spotModal, checkoutModal, wildcardModal].forEach(modal => {
+      modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+    });
+
+    // 08. FAQ ACCORDION
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
